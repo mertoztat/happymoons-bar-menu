@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@600&family=Russo+One&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  line-height: 1.5;
+  background-color: #19352e;
+  font-family: "Monserrat", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.title h1 {
+  font-size: 50px;
+  letter-spacing: 17px;
+  font-family: "Russo One", sans-serif;
+  display: inline;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
   color: white;
+  background-image: linear-gradient(60deg, #d86608, #d3d3d3);
+  background-clip: text;
+  color: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+header h4,
+.price {
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  color: rgb(250, 118, 70);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+p {
+  color: #f2f2f2;
+}
+
+.section {
+  width: 100vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.menu {
+  padding: 50px 0;
+}
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn-container {
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  background-color: transparent;
+  color: rgb(250, 118, 70);
+  padding: 8px 20px;
+  margin: 0 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 15px;
+  letter-spacing: 1px;
+  border: none;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+.filter-btn:hover {
+  animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 25px #ff7b00, 0 0 50px #1e3932;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+.menu-item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 35rem;
+}
+.photo {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+  border-width: 3.4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, rgb(238, 76, 18), rgb(255, 255, 255))
+    1;
+  display: block;
+}
+.item-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dotted orange;
+}
+
+.item-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  color: #c7c7c7;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 30rem;
+  }
+
+  .item-text {
+    font-size: 16px;
+  }
+  .photo {
+    height: 180px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo {
+    height: 150px;
   }
 }
